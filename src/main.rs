@@ -18,8 +18,7 @@ fn main() {
             DefaultPlugins
                 .set(WindowPlugin {
                     primary_window: Some(Window {
-                        title: "Bevy game".to_string(), // ToDo
-                        // Bind to canvas included in `index.html`
+                        title: "Test".to_string(),
                         canvas: Some("#bevy".to_owned()),
                         fit_canvas_to_parent: true,
                         // Tells wasm not to override default event handling, like F5 and Ctrl+R
@@ -38,7 +37,6 @@ fn main() {
         .run();
 }
 
-// Sets the icon on windows and X11
 fn set_window_icon(
     windows: NonSend<WinitWindows>,
     primary_window: Query<Entity, With<PrimaryWindow>>,
